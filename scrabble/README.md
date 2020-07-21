@@ -4,7 +4,18 @@ Given a word, compute the scrabble score for that word.
 
 ### Acceptance Criteria
 
-Each method should be no more than 5 lines, and contain no more than 5 operations.
+```ruby
+Scrabble.new('').score # => 0
+Scrabble.new(" \t\n").score # => 0
+Scrabble.new(nil).score # => 0
+Scrabble.new('a').score # => 1
+Scrabble.new('f').score # => 4
+Scrabble.new('street').score # => 6
+Scrabble.new('quirky').score # => 22
+Scrabble.new('OXYPHENBUTAZONE').score # => 41
+```
+
+Each `Scrabble` method should be no more than 5 lines and contain no more than 5 operations.
 
 ##### Letter Values
 
@@ -20,7 +31,7 @@ You'll need these:
 | J, X                          |     8  |
 | Q, Z                          |     10 |
 
-Examples
+Example
 "cabbage" should be scored as worth 14 points:
 
 - 3 points for C
@@ -31,12 +42,11 @@ Examples
 
 And to total:
 
+```
 3 + 2x1 + 2x3 + 2 + 1
-
 = 3 + 2 + 6 + 3
-
 = 14
-
+```
 
 
 ##### Extensions
